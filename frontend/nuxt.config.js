@@ -50,6 +50,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src: '~/plugins/vue-formulate', mode: 'client' }, 
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -81,6 +82,5 @@ export default {
   server: {
     port: process.env.DEV_HOST_PORT,
     host: process.env.DEV_HOST_SERVER,
-    timing: false
-  }
+  },
 }
