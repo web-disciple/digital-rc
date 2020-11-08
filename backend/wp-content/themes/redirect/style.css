@@ -1,0 +1,8 @@
+/*
+Theme Name: Redirect
+Description: Redirects the front end to admin.digitalrc.com
+*/
+
+#wp-content-wrap {
+    display: none !important;
+}
