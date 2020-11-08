@@ -69,6 +69,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -82,5 +84,22 @@ export default {
   server: {
     port: process.env.DEV_HOST_PORT,
     host: process.env.DEV_HOST_SERVER,
+  },
+
+  robots: () => {
+    return {
+      UserAgent: '*',
+      Allow: '/'
+    }
+  },
+
+  sitemap: {
+    hostname: 'https://www.digitalrc.fr/',
+    gzip: true,
+    routes: [
+      '/',
+      '/products',
+      '/contact'
+    ]
   },
 }
