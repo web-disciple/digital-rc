@@ -11,7 +11,7 @@
             {{ acf.bloc_confiance_titre }}
         </h3>
         <div class="flex flex-col items-center justify-center lg:flex-row lg:flex-wrap px-32">
-            <carousel v-if="data !== null" perPage="1">
+            <carousel v-if="data !== null" :perPage="1">
                 <slide class="px-8" v-for="item in data" :key="item.acf.auteur">
                     <div class="flex flex-col">
                         <div>
@@ -26,6 +26,11 @@
                     </div>
                 </slide>
             </carousel>
+            <div v-else>
+                <div class="flex justify-center items-center">
+                    <img class="h-16" src="~/static/images/loading/loading.svg" alt="" />
+                </div>
+            </div>
         </div>
     </div>
 </section>

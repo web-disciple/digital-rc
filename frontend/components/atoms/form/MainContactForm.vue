@@ -43,9 +43,10 @@ export default {
                     label: "Je suis intéressé par :",
                     validation: "required",
                     options: {
-                        imprimantes: "Achat d'imprimantes",
-                        locations: "Location d'imprimantes",
-                        maintenance: "Contrat de maintenance",
+                        Imprimantes: "Achat d'imprimantes",
+                        Locations: "Location d'imprimantes",
+                        Maintenance: "Contrat de maintenance",
+                        Autres: "Autres",
                     },
                 },
                 {
@@ -57,7 +58,6 @@ export default {
     },
     methods: {
         formSubmit() {
-            console.log("submit", this.values);
             this.$mail
                 .send({
                     Host: process.env.SMTP_SERVER,

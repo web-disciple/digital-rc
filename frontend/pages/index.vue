@@ -43,7 +43,7 @@
                     </h2>
                 </div>
                 <div class="lg:w-1/4 flex justify-center lg:justify-end mt-8">
-                    <light-cta :link="data.accroche_1_button_lien">{{
+                    <light-cta link="/products">{{
               data.accroche_1_button
             }}</light-cta>
                 </div>
@@ -52,27 +52,27 @@
         <div class="mt-8">
             <div class="lg:flex lg:justify-evenly">
                 <product-card class="lg:w-1/3 mt-8">
-                    <nuxt-link :to="data.bloc_produit_lien_1" class="flex justify-center">
+                    <nuxt-link to="/products" class="flex justify-center">
                         <img class="h-64 border border-gray-900 border-opacity-25 responsive-img-height hover:border-opacity-75" :src="data.bloc_produit_image_1.url" alt />
                     </nuxt-link>
                     <div>
-                        <nuxt-link class="font-title text-xl px-4 font-semibold text-center py-4 block hover:underline" :to="data.bloc_produit_lien_1">⇥ {{ data.bloc_produit_texte_1 }}</nuxt-link>
+                        <nuxt-link class="font-title text-xl px-4 font-semibold text-center py-4 block hover:underline" to="/products">⇥ {{ data.bloc_produit_texte_1 }}</nuxt-link>
                     </div>
                 </product-card>
                 <product-card class="lg:w-1/3 mt-8">
-                    <nuxt-link :to="data.bloc_produit_lien_2" class="flex justify-center">
+                    <nuxt-link to="/products" class="flex justify-center">
                         <img class="h-64 border border-gray-900 border-opacity-25 responsive-img-height hover:border-opacity-75" :src="data.bloc_produit_image_2.url" alt />
                     </nuxt-link>
                     <div>
-                        <nuxt-link class="font-title text-xl px-4 font-semibold text-center py-4 block hover:underline" :to="data.bloc_produit_lien_1">⇥ {{ data.bloc_produit_texte_2 }}</nuxt-link>
+                        <nuxt-link class="font-title text-xl px-4 font-semibold text-center py-4 block hover:underline" to="/products">⇥ {{ data.bloc_produit_texte_2 }}</nuxt-link>
                     </div>
                 </product-card>
                 <product-card class="lg:w-1/3 mt-8">
-                    <nuxt-link :to="data.bloc_produit_lien_3" class="flex justify-center">
+                    <nuxt-link to="/products" class="flex justify-center">
                         <img class="h-64 border border-gray-900 border-opacity-25 responsive-img-height hover:border-opacity-75" :src="data.bloc_produit_image_3.url" alt />
                     </nuxt-link>
                     <div>
-                        <nuxt-link class="font-title text-xl px-4 font-semibold text-center py-4 block hover:underline" :to="data.bloc_produit_lien_1">⇥ {{ data.bloc_produit_texte_3 }}</nuxt-link>
+                        <nuxt-link class="font-title text-xl px-4 font-semibold text-center py-4 block hover:underline" to="/products">⇥ {{ data.bloc_produit_texte_3 }}</nuxt-link>
                     </div>
                 </product-card>
             </div>
@@ -96,7 +96,7 @@
 <script>
 export default {
     head: {
-        title: "Digital RC - Imprimantes professionnelles",
+        title: "Digital RC - Accueil - Imprimantes professionnelles",
         meta: [{
             hid: "description",
             name: "description",

@@ -9,7 +9,7 @@
             </div>
             <div class="lg:flex items-center hidden">
                 <n-link class="text-lg mx-4" to="/">Accueil</n-link>
-                <n-link class="text-lg mx-4" to="/products">Produits</n-link>
+                <n-link class="text-lg mx-4" to="/products">Produits / Services</n-link>
                 <n-link class="text-lg ml-4" to="/contact">Contact</n-link>
                 <a href="#" class="ml-4">
                     <img src="~/static/images/icons/alternate_email-24px.svg" alt />

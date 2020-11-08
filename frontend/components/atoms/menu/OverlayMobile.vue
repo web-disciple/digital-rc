@@ -3,7 +3,7 @@
     <div class="flex flex-col">
         <div class="flex flex-col items-end mt-24 px-8">
             <n-link class="text-lg pt-2" to="/">Accueil</n-link>
-            <n-link class="text-lg pt-2" to="/products">Produits</n-link>
+            <n-link class="text-lg pt-2" to="/products">Produits / Services</n-link>
             <n-link class="text-lg pt-2" to="/contact">Contact</n-link>
             <div class="flex items-center">
                 <a href="#" class="pt-2">
