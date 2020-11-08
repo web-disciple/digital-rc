@@ -10,11 +10,22 @@
         <h3 class="text-center text-lg lg:text-xl font-title font-medium mb-8">
             {{ acf.bloc_confiance_titre }}
         </h3>
-        <div class="flex flex-col items-center justify-center lg:flex-row lg:flex-wrap">
-            <img class="h-32 p-4" src="~/static/images/logos/nb-dury.webp" alt="" />
-            <img class="h-32 p-4" src="~/static/images/logos/nb-nicolas.webp" alt="" />
-            <img class="h-32 p-4" src="~/static/images/logos/nb-smartcopie.webp" alt="" />
-            <img class="h-32 p-4" src="~/static/images/logos/nb-vdl.webp" alt="" />
+        <div class="flex flex-col items-center justify-center lg:flex-row lg:flex-wrap px-32">
+            <carousel v-if="data !== null" perPage="1">
+                <slide class="px-8" v-for="item in data" :key="item.acf.auteur">
+                    <div class="flex flex-col">
+                        <div>
+                            <img class="h-32" :src="item.acf.logo_or_image.url" alt="" />
+                        </div>
+                        <div>
+                            <p class="font-bold">{{ item.acf.auteur }}</p>
+                        </div>
+                        <div>
+                            {{ item.acf.description }}
+                        </div>
+                    </div>
+                </slide>
+            </carousel>
         </div>
     </div>
 </section>
@@ -23,7 +34,19 @@
 <script>
 export default {
     props: {
-        acf: Object
-    }
+        acf: Object,
+    },
+    data() {
+        return {
+            data: null,
+        };
+    },
+    async fetch() {
+        this.data = await fetch(
+            "https://admin.digitalrc.fr/wp-json/wp/v2/avis_clients"
+        ).then((res) => {
+            return res.json();
+        });
+    },
 };
 </script>

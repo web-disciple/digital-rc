@@ -50,7 +50,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/vue-formulate', mode: 'client' }, 
+    { src: '~/plugins/vue-formulate', mode: 'client' },
+    { src: '~/plugins/mail', mode: 'client' },
+    { src: '~/plugins/vue-carousel', mode: 'client' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -71,6 +73,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    '@nuxtjs/recaptcha'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -86,6 +89,7 @@ export default {
     host: process.env.DEV_HOST_SERVER,
   },
 
+  // Robots.txt
   robots: () => {
     return {
       UserAgent: '*',
@@ -93,6 +97,7 @@ export default {
     }
   },
 
+  // Sitemap.xml
   sitemap: {
     hostname: 'https://www.digitalrc.fr/',
     gzip: true,
@@ -101,5 +106,14 @@ export default {
       '/products',
       '/contact'
     ]
+  },
+
+  // Recaptcha config
+  recaptcha: {
+    language: 'fr',
+    hideBadge: false, // Hide badge element (v3 & v2 via size=invisible)
+    siteKey: process.env.RECAPTCHA_SITE_KEY, // Site key for requests
+    version: 2, // Version
+    size: 'compact' // Size: 'compact', 'normal', 'invisible' (v2)
   },
 }
